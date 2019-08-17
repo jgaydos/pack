@@ -5,6 +5,15 @@ PACK (Password Analysis and Cracking Toolkit) is a collection of utilities devel
 
 NOTE: The toolkit itself is not able to crack passwords, but instead designed to make operation of password crackers more efficient.
 
+Requirements
+===========
+
+Scripts have been updated to use Python3.
+
+```
+Python3.0+
+```
+
 Selecting passwords lists for analysis
 ======================================
 
