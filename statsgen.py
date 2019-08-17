@@ -119,7 +119,7 @@ class StatsGen:
         return (pass_length, charset, simplemask_string, advancedmask_string, policy)
 
     def generate_stats(self, filename):
-        """ Generate password statistics. """
+        # Generate password statistics.
 
         # skip words with non ascii charachters
         with open(filename, 'r', encoding="utf-8", errors='ignore') as f:
@@ -174,7 +174,7 @@ class StatsGen:
                         self.stats_advancedmasks[advancedmask] = 1
 
     def print_stats(self):
-        """ Print password statistics. """
+        # Print password statistics.
 
         print("[+] Analyzing %d%% (%d/%d) of passwords" % (self.filter_counter*100/self.total_counter, self.filter_counter, self.total_counter))
         print("    NOTE: Statistics below is relative to the number of analyzed passwords, not total number of passwords")

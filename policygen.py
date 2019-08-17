@@ -37,7 +37,7 @@ class PolicyGen:
         self.showmasks = False
 
     def getcomplexity(self, mask):
-        """ Return mask complexity. """
+        # Return mask complexity.
         count = 1
         for char in mask[1:].split("?"):
             if char == "l":   count *= 26
@@ -45,12 +45,13 @@ class PolicyGen:
             elif char == "d": count *= 10
             elif char == "s": count *= 33
             elif char == "a": count *= 95
-            else: print("[!] Error, unknown mask ?%s in a mask %s" % (char,mask))
+            else: print("[!] Error, unknown mask ?%s in a mask %s" % \
+                (char,mask))
 
         return count
 
     def generate_masks(self, noncompliant):
-        """ Generate all possible password masks matching the policy """
+        # Generate all possible password masks matching the policy
 
         total_count = 0
         sample_count = 0

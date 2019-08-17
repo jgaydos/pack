@@ -48,7 +48,7 @@ class MaskGen:
         self.total_occurrence = 0
 
     def getcomplexity(self, mask):
-        """ Return mask complexity. """
+        # Return mask complexity.
         count = 1
         for char in mask[1:].split("?"):
             if char == "l":   count *= 26
@@ -68,7 +68,7 @@ class MaskGen:
         return count
 
     def loadmasks(self, filename):
-        """ Load masks and apply filters. """
+        # Load masks and apply filters.
         maskReader = csv.reader(open(args[0],'r'), delimiter=',', quotechar='"')
 
         for (mask,occurrence) in maskReader:
@@ -100,7 +100,7 @@ class MaskGen:
                 self.masks[mask]['optindex'] = 1 - mask_complexity//mask_occurrence
 
     def generate_masks(self,sorting_mode):
-        """ Generate optimal password masks sorted by occurrence, complexity or optindex """
+        # Generate optimal password masks sorted by occurrence, complexity or optindex
         sample_count = 0
         sample_time = 0
         sample_occurrence = 0
